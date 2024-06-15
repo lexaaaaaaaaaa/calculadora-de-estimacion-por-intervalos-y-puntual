@@ -1,0 +1,64 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Estimación Puntual</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        
+
+    <div class="container">
+        <h1>Calculadora de Estimación Puntual</h1>
+
+        <label for="n">Tamaño de la muestra (n):</label>
+        <input type="number" id="n" min="1" value="1">
+
+        <label for="suma">Suma de los datos (Σx):</label>
+        <input type="number" id="suma" value="0">
+
+        <button id="calcular">Calcular</button>
+
+        <div id="resultados">
+            <h2>Resultados:</h2>
+            <p>Media Muestral= A la estimacion puntual(x̄):= <span id="media"></span></p>
+        </div>
+    </div>
+
+
+  <div class="container">
+        <h1>Calculadora de Estimación por Intervalos</h1>
+        <form id="estimationForm">
+            <label for="mean">Media (X̄):</label>
+            <input type="number" id="mean" required>
+            
+            <label for="stdDev">Desviación Estándar (σ):</label>
+            <input type="number" id="stdDev" required>
+            
+            <label for="sampleSize">Tamaño de Muestra (n):</label>
+            <input type="number" id="sampleSize" required>
+            
+            <label for="confidenceLevel">Nivel de Confianza (%):</label>
+            <input type="number" id="confidenceLevel" required>
+
+            <label for="zValue">Valor de Z:</label>
+            <input type="number" step="0.001" id="zValue" required>
+            
+            <button type="button" onclick="calculateEstimation()">Calcular</button>
+        </form>
+        
+        <div id="results">
+            <h2>Resultados</h2>
+            
+            <p id="intervalEstimate">Estimación por Intervalo: </p>
+        </div>
+    </div>
+
+
+
+
+    <script src="javascript.js"></script>
+
+</body>
+</html>
